@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><span id="lightingModePref"></span> Mode</h1>
+    <h1>Shaking <span id="motionPref"></span> Allowed</h1>
+    <h1><span id="vibrateAvail"></span> Vibrate</h1>
+
+    <script>
+      document.querySelector('#lightingModePref').textContent = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'Dark' : 'Light';
+      document.querySelector('#motionPref').textContent = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? `isn't` : 'is';
+      document.querySelector('#vibrateAvail').textContent = window.navigator.vibrate(0) ? 'Can' : `Can't`;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,3 @@
+Regular JPEGs (.jpg) do not support transparency.
+
+https://en.wikipedia.org/wiki/Transparency_(graphic)

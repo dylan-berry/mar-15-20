@@ -1,0 +1,59 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creating Graphics</title>
+    <style>
+      body {
+        background-image: url('./plaid.jpg');
+        display: flex;
+        justify-content: space-around;
+      }
+      p {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="./cross.gif" alt="" />
+      <p>gif</p>
+    </div>
+
+    <div>
+      <img src="./cross.png" alt="" />
+      <p>png</p>
+    </div>
+
+    <div>
+      <img src="./cross.jpg" alt="" />
+      <p>jpg</p>
+    </div>
+
+    <div>
+      <canvas width="50" height="50"></canvas>
+      <p>canvas</p>
+    </div>
+
+    <div>
+      <svg width="50" height="50">
+        <rect width="50" height="50" fill="white" />
+        <rect x="20" width="10" height="50" fill="red" />
+        <rect y="20" width="50" height="10" fill="red" />
+      </svg>
+      <p>svg</p>
+    </div>
+
+    <script>
+      //Canvas
+      const canvas = document.querySelector('canvas');
+      const ctx = canvas.getContext('2d');
+      ctx.fillStyle = 'white';
+      ctx.fillRect(0, 0, 50, 50);
+      ctx.fillStyle = 'red';
+      ctx.fillRect(20, 0, 10, 50);
+      ctx.fillRect(0, 20, 50, 10);
+    </script>
+  </body>
+</html>
